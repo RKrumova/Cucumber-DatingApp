@@ -3,7 +3,7 @@ package model;
 import javax.xml.stream.Location;
 import java.util.ArrayList;
 
-public class Match {
+public class Match  {
     private User user1;
     private User user2;
     private int compatibilityScore;

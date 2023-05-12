@@ -1,8 +1,12 @@
 package model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
+@Setter
 public class Chat extends Message {
     private User user1;
     private User user2;
@@ -10,31 +14,6 @@ public class Chat extends Message {
 
     public Chat(User from, User to, String text) {
         super(from, to, text);
-    }
-
-    // getters and setters
-    public User getUser1() {
-        return user1;
-    }
-
-    public void setUser1(User user1) {
-        this.user1 = user1;
-    }
-
-    public User getUser2() {
-        return user2;
-    }
-
-    public void setUser2(User user2) {
-        this.user2 = user2;
-    }
-
-    public List<Message> getMessages() {
-        return messages;
-    }
-
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
     }
 
     // other methods
@@ -51,6 +30,7 @@ public class Chat extends Message {
     }
 
 }
+
 /**
 In this example, the Chat class has three attributes: user1, user2, and messages. The user1 and user2 attributes represent the two users who are participating in the chat, while the messages attribute is a list of all the messages exchanged between the users.
 

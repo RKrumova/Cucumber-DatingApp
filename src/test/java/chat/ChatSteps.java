@@ -1,39 +1,34 @@
 package chat;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ChatSteps {
-
+    private ChatScreenModel chatScreenModel;
     @Given("Имаме празен чат:")
     public void emtyChatScreen() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        chatScreenModel = new ChatScreenModel();
     }
     @When("Имаме потребител изпращател{string}")
-    public void hasSender(String userSender) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void setSender(String userSender) {
+        chatScreenModel.setSender();
     }
     @When("Имаме потребител получател{string}")
-    public void hasReceiver(String userReceiver) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void setReceiver(String userReceiver) {
+        chatScreenModel.setReceiver();
     }
-    @When("Получаваме видът връзка която имat {string}")
+    @When("Получаваме видът връзка която имaт {string}")
     public void checkMatch(String isMatched) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        chatScreenModel.checkMatch();
     }
     @When("Изпратим някакво съобщение {string}")
-    public void sendMessage(String messageSend) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void sendMessage(String text) {
+        chatScreenModel.addMessage(text);
     }
     @Then("Проверяваме дали е получено съобщението {string}")
-    public void checkIfRecieved(String messageReceived) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void checkIfReceived(String messageReceived) {
+        chatScreenModel.checkDelivery(messageReceived);
     }
 }

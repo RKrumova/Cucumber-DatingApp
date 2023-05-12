@@ -10,10 +10,6 @@ public class ChatController {
     private Chat chat;
     private List<Message> Message;
 
-    public ChatController(){
-
-        this.chat = chat;
-    }
     public void startChat(User sender, User receiver){
 
     }

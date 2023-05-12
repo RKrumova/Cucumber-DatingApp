@@ -13,7 +13,7 @@ public class MessageController {
         this.messages = new ArrayList<>();
     }
 
-    public void createMessage(User sender, User receiver, String content) {
+    public void addMessage(User sender, User receiver, String content) {
         // Logic to create a new message between the sender and receiver
     }
 

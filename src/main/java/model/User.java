@@ -57,8 +57,4 @@ public class User {
         this.profilePicture = profilePicture;
     }
 
-
-
-
-
 }
