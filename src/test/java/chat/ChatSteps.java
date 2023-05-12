@@ -31,4 +31,5 @@ public class ChatSteps {
     public void checkIfReceived(String messageReceived) {
         chatScreenModel.checkDelivery(messageReceived);
     }
+
 }

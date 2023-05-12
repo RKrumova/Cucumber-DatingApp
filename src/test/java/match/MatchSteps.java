@@ -4,8 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+
 public class MatchSteps {
     private MatchScreenModel matchScreenModel;
+
     @Given("Отваряме екран на който да разглеждаме потребители")
     public void openMatchScreen() {
         matchScreenModel = new MatchScreenModel();
@@ -24,7 +27,8 @@ public class MatchSteps {
         matchScreenModel.swipeCheck(swipeDirection,swipeDirectionUser2);
     }
     @Then("Проверяваме дали съвпадат и получаваме {string}")
-    public void matchMessageCheck(String matchMessage) { 
+    public void matchMessageCheck(String matchMessage) {
+        Assert.assertEquals(matchMessage, matchScreenModel.getMessage());
     }
 
 }

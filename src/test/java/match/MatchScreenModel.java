@@ -1,25 +1,24 @@
 package match;
+import model.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import model.User;
 
-import java.util.List;
+import java.util.Map;
+
 @AllArgsConstructor
 @Getter
 public class MatchScreenModel {
+    private User swiper;
     private User user;
-    private List<User> matches;
-    public MatchScreenModel() {
-        
-    }
+    private String matches;
+    private String matchMessage;
 
-    public void addMatch(User match) {
-        matches.add(match);
-    }
+    public MatchScreenModel() {}
 
-    public String swipeCheck(String swipe1,String swipe2) {
-        if(swipe1 == swipe2){
+
+    public String swipeCheck(String swipe1, String swipe2) {
+        if(swipe1.equals(swipe2)){
             return "You matched";
         } else if (swipe2 == "" || swipe2 == null) {
             return "Hasn't seen you yet";
@@ -27,11 +26,15 @@ public class MatchScreenModel {
             return "You didn't match";
         }
     }
-
+    public void setSwiper() {
+        this.swiper =swiper;
+    }
     public void setUser2() {
         this.user = user;
     }
 
-    public void setSwiper() {
+
+    public String getMessage() {
+        return matchMessage;
     }
 }
