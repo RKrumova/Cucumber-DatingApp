@@ -2,20 +2,20 @@ package model;
 
 import java.util.List;
 
-public class Profile extends User {
+public class Profile{
     private String bio;
     private List<String> interests;
     private String gender;
     private int age;
     private String location;
 
-    public Profile(String bio, List<String> interests, String gender, int age, String location) {
+/*    public Profile(String bio, List<String> interests, String gender, int age, String location) {
         this.bio = bio;
         this.interests = interests;
         this.gender = gender;
         this.age = age;
         this.location = location;
-    }
+    }*/
 
     public String getBio() {
         return bio;

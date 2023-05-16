@@ -9,6 +9,13 @@ public class User {
     private String location;
     private List<String> interests;
     private String profilePicture;
+    //for db
+    public User(String name, int age, String gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
     public String getName() {
         return name;
     }

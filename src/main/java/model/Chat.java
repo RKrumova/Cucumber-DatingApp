@@ -16,6 +16,7 @@ public class Chat extends Message {
         super(from, to, text);
     }
 
+
     // other methods
     public void addMessage(Message message) {
         this.messages.add(message);

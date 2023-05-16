@@ -6,9 +6,17 @@ import java.util.ArrayList;
 public class Match  {
     private User user1;
     private User user2;
+    private boolean isMatched;
+
     private int compatibilityScore;
     private ArrayList<String> sharedInterests;
     private Location location;
+//for db
+    public Match(User user1, User user2, boolean isMatched) {
+        this.user1 = user1;
+        this.user2 = user2;
+        this.isMatched = isMatched;
+    }
 
     public Match(User user1, User user2, int compatibilityScore, ArrayList<String> sharedInterests, Location location) {
         this.user1 = user1;

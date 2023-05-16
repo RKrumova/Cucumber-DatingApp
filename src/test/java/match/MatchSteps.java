@@ -24,7 +24,7 @@ public class MatchSteps {
     @When("Плъзнете\\/преместваме на {string}")
     @When("Получаваме отговор за {string}")
     public void swipeInformation(String swipeDirection, String swipeDirectionUser2) {
-        matchScreenModel.swipeCheck(swipeDirection,swipeDirectionUser2);
+        matchScreenModel.swipeCheckResult(swipeDirection,swipeDirectionUser2);
     }
     @Then("Проверяваме дали съвпадат и получаваме {string}")
     public void matchMessageCheck(String matchMessage) {
