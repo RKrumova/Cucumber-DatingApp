@@ -17,18 +17,22 @@ public class MatchSteps {
     public void setOurUser(String swiper) {
         matchScreenModel.setSwiper();
     }
-    @And("Получаваме потребител на който да реагираме {string}")
+    @When("Получаваме потребител на който да реагираме {string}")
     public void hasUser(String user2) {
         matchScreenModel.setUser2();
     }
-    @When("Плъзнете\\/преместваме на {string}")
-    @When("Получаваме отговор за {string}")
-    public void swipeInformation(String swipeDirection, String swipeDirectionUser2) {
+    @When("Плъзнете\\/преместваме на {string} и Получаваме отговор за {string}")
+    public void swipeAndCheckResult(String swipeDirection, String swipeDirectionUser2) {
         matchScreenModel.swipeCheckResult(swipeDirection,swipeDirectionUser2);
+
     }
+
+
     @Then("Проверяваме дали съвпадат и получаваме {string}")
     public void matchMessageCheck(String matchMessage) {
         Assert.assertEquals(matchMessage, matchScreenModel.getMessage());
     }
+
+
 
 }

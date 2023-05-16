@@ -3,8 +3,7 @@ Feature: Свързване на потребители
     Given Отваряме екран на който да разглеждаме потребители
     When Имаме статичен потребител "statUser"
     And Получаваме потребител на който да реагираме "<user>"
-    And Плъзнете/преместваме на "<swipeDirection>"
-    And Получаваме отговор за "<swipeDirectionUser2>"
+    And Плъзнете/преместваме на "<swipeDirection>" и Получаваме отговор за "<swipeDirectionUser2>"
     Then Проверяваме дали съвпадат и получаваме "<matchMessage>"
     Examples:
       | user | swipeDirection | swipeDirectionUser2 | matchMessage |
