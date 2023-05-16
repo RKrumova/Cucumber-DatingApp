@@ -19,4 +19,5 @@ public class ChatController {
     public List<Chat> getAllCHatsForUser(User user){
         return null;
     }
+
 }

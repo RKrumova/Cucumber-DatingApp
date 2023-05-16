@@ -14,11 +14,9 @@ public class MessageController {
     }
 
     public void addMessage(User sender, User receiver, String content) {
-        // Logic to create a new message between the sender and receiver
     }
 
     public List<Message> getAllMessagesForUser(User user) {
-        // Logic to retrieve all messages for a given user
         return null;
     }
 }

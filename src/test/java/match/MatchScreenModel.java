@@ -3,6 +3,7 @@ import model.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
 
 @AllArgsConstructor
 @Getter
@@ -15,13 +16,13 @@ public class MatchScreenModel {
     public MatchScreenModel() {}
 
 
-    public String swipeCheckResult(String swipe1, String swipe2) {
-        if(swipe1.equals(swipe2)){
-            return "You matched";
-        } else if (swipe2.isEmpty() || swipe2 == null) {
-            return "Hasn't seen you yet";
+    public void swipeCheckResult(String swipe1, String swipe2) {
+        if(StringUtils.equals(swipe1, swipe2) && swipe1.equals("like")){
+            matchMessage =  "You matched";
+        } else if (StringUtils.isBlank(swipe2)) {
+            matchMessage =  "Hasn't seen you yet";
         } else{
-            return "You didn't match";
+            matchMessage = "You didn't match";
         }
     }
     public void setSwiper() {
